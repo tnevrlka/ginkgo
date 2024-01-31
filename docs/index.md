@@ -3532,7 +3532,7 @@ ReportAfterEach(func(report SpecReport) {
 you'll end up with multiple processes writing to the same file and the output will be a mess.  There is a better approach for this usecase...
 
 #### Reporting Nodes - ReportBeforeSuite and ReportAfterSuite
-`ReportBeforeSuite` and `ReportAfterSuite` nodes behave similarly to `BeforeSuite` and `AfterSuite` and can be placed at the top-level of your suite (typically in the suite bootstrap file).  `ReportBeforeSuite` and `ReportAfterSuite` nodes take a closure that accepts a single [`Report`]((https://pkg.go.dev/github.com/onsi/ginkgo/v2/types#Report)) argument:
+`ReportBeforeSuite` and `ReportAfterSuite` nodes behave similarly to `BeforeSuite` and `AfterSuite` and can be placed at the top-level of your suite (typically in the suite bootstrap file).  `ReportBeforeSuite` and `ReportAfterSuite` nodes take a closure that accepts a single [`Report`](https://pkg.go.dev/github.com/onsi/ginkgo/v2/types#Report) argument:
 
 ```go
 var _ = ReportBeforeSuite(func(report Report) {
